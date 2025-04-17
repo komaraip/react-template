@@ -31,7 +31,7 @@ const Header = () => {
       <div className={styles.header}>
         {logo}
 
-        <nav className={showMenu ? '${styles["show-nav"]}' : '${styles["hide-nav"]}'}>
+        <nav className={showMenu ? `${styles["show-nav"]}` : `${styles["hide-nav"]}`}>
           <div className={
               showMenu
                 ? `${styles["nav-wrapper"]} ${styles["show-nav-wrapper"]}`
@@ -45,11 +45,13 @@ const Header = () => {
               {logo}
               <FaTimes size={22} color="#fff" onClick={hideMenu} />
             </li>
+
             <li>
               <NavLink to="/" className={activeLink}>
                 Home
               </NavLink>
             </li>
+
             <li>
               <NavLink to="/admin/home" className={activeLink}>
                 Dashboard
@@ -62,13 +64,11 @@ const Header = () => {
               <NavLink to="/login" className={activeLink}>
                 Login
               </NavLink>
+              
               <NavLink to="/register" className={activeLink}>
                 Register
               </NavLink>
             </span>
-            <Link to="/">
-              <button className="--btn --btn-primary">Get Started</button>
-            </Link>
           </div>          
         </nav>
 
